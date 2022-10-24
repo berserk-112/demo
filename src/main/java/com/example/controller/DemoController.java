@@ -1,9 +1,7 @@
 package com.example.controller;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import com.example.test.People;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/demo")
@@ -24,5 +22,10 @@ public class DemoController {
     public String test3(@RequestParam("a") String a) {
         System.out.println("rest.test3 is called");
         return "test3";
+    }
+
+    @PostMapping("people/add")
+    public void add(@RequestParam People user) {
+        System.out.println(user.toString());
     }
 }

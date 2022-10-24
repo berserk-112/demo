@@ -1,18 +1,7 @@
 package com.example;
 
-import com.example.elasticSearch.Conference;
-import com.example.elasticSearch.ConferenceRepository;
-import lombok.var;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.data.elasticsearch.core.ElasticsearchOperations;
-import org.springframework.data.elasticsearch.core.geo.GeoPoint;
-
-import javax.annotation.PostConstruct;
-import javax.annotation.PreDestroy;
-import java.io.IOException;
-import java.util.Arrays;
 
 @SpringBootApplication
 public class DemoApplication {
@@ -21,6 +10,7 @@ public class DemoApplication {
     }
 
 
+/*
     @Autowired
     ElasticsearchOperations operations;
     @Autowired
@@ -53,5 +43,6 @@ public class DemoApplication {
 
         repository.saveAll(documents);
     }
+*/
 }
 

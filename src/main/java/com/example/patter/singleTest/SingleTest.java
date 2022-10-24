@@ -1,4 +1,4 @@
-package com.example.singleTest;
+package com.example.patter.singleTest;
 
 public class SingleTest {
     public static void main(String[] args) {

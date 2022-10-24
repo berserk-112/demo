@@ -6,8 +6,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class FinalTest {
+    private final Integer nums;
+    public FinalTest(int num){
+        nums = num;
+//        nums = 11;
+    }
     public static void main(String[] args) {
         //不能修改str
+        FinalTest finalTest = new FinalTest(10);
+        System.out.println(String.valueOf(finalTest.nums));
+        FinalTest finalTest1 = new FinalTest(11);
+        System.out.println(String.valueOf(finalTest1.nums));
         final String str = "123";
 
 //        str = "111";

@@ -19,6 +19,7 @@ public class DemoApplication {
     }
 
 
+/*
     @Autowired
     ElasticsearchOperations operations;
     @Autowired
@@ -51,5 +52,6 @@ public class DemoApplication {
 
         repository.saveAll(documents);
     }
+*/
 }
 

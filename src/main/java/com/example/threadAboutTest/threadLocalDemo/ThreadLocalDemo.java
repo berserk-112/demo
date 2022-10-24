@@ -1,4 +1,4 @@
-package com.example.threadLocalDemo;
+package com.example.threadAboutTest.threadLocalDemo;
 
 import java.util.LinkedList;
 import java.util.concurrent.*;

@@ -30,9 +30,13 @@ public class Main {
             sqlSession=sqlSessionFactory.openSession();
             RoleMapper roleMapper=sqlSession.getMapper(RoleMapper.class);
             Role role=roleMapper.getRole(1L);
+            Role testRole = new Role();
+            testRole.setRoleName("userT");
+            roleMapper.insertRole(testRole);
             System.out.println(role.getId()+":"+role.getRoleName()+":"+role.getNote());
             sqlSession.commit();
-            
+            sqlSession.rollback();
+
         } catch (Exception e) {
             // TODO Auto-generated catch block
             sqlSession.rollback();

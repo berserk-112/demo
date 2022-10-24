@@ -10,6 +10,8 @@ public class WildcardTest {
         List<? extends Apple> lists = Arrays.asList(new Apple(), new BadApple());
         Apple a = (Apple) lists.get(0);
         Apple b = (Apple) lists.get(1);
+        System.out.println(b.getClass() == BadApple.class); //true
+        System.out.println(b.getClass() == Apple.class); //false
         BadApple badApple0 = (BadApple) lists.get(1);
 //        BadApple badApple1 = (BadApple) lists.get(0); //编译报错
         System.out.println(badApple0.toString());

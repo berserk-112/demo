@@ -1,5 +1,6 @@
 package com.example.hashCode;
 
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -16,6 +17,7 @@ public class HashCodeTest {
         for (People p : set) {
             System.out.println(p.hashCode() + "-----" + p.toString());
         }
+        HashMap<Integer, Integer> map = new HashMap<>();
     }
 }
 

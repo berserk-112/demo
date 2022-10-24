@@ -1,4 +1,4 @@
-package com.example.AQSTest;
+package com.example.threadAboutTest.AQSTest;
 
 
 import java.net.InetAddress;

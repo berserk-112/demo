@@ -1,19 +1,13 @@
-package com.example.AQSTest.threadPoolTest;
+package com.example.threadAboutTest.AQSTest.threadPoolTest;
 
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.Set;
-import java.util.concurrent.ArrayBlockingQueue;
-import java.util.concurrent.ThreadPoolExecutor;
-import java.util.concurrent.TimeUnit;
-import java.util.concurrent.atomic.AtomicInteger;
-import java.util.concurrent.locks.LockSupport;
+import java.util.concurrent.*;
 
 public class ThreadPoolTest {
     public static void main(String[] args) {
         System.out.println(~1);
+        ConcurrentMap<Integer, Integer> map = new ConcurrentHashMap<>();
         ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(
-                10, 20, 20, TimeUnit.SECONDS, new ArrayBlockingQueue<>(10));
+                10, 10, 20, TimeUnit.SECONDS, new ArrayBlockingQueue<>(10));
 
         int i = 1;
         while (i < 100) {
