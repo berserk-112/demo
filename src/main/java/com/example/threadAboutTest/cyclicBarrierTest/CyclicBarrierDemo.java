@@ -14,7 +14,7 @@ public class CyclicBarrierDemo {
 
     private CyclicBarrier cyclicBarrier;
     private List<List<Integer>> partialResults
-     = Collections.synchronizedList(new ArrayList<>());
+            = Collections.synchronizedList(new ArrayList<>());
     private Random random = new Random();
     private int NUM_PARTIAL_RESULTS;
     private int NUM_WORKERS;
@@ -63,7 +63,7 @@ public class CyclicBarrierDemo {
             for (List<Integer> threadResult : partialResults) {
                 System.out.print("Adding ");
                 for (Integer partialResult : threadResult) {
-                    System.out.print(partialResult+" ");
+                    System.out.print(partialResult + " ");
                     sum += partialResult;
                 }
                 System.out.println();

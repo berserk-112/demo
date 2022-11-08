@@ -1,4 +1,4 @@
-package com.example.threadAboutTest.AQSTest.threadPoolTest;
+package com.example.threadAboutTest.threadPoolTest;
 
 import java.util.concurrent.*;
 
