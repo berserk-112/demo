@@ -1,12 +1,19 @@
 package com.example.wildcardTest;
 
+import com.example.synchronizedTest.A;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 public class WildcardTest {
     public static void main(String[] args) {
+        int number = 100;
+        System.out.println();
+        System.out.println(number << 8 | '\'');
         //lists不能通过add()方法加入元素，但是可以将一个Apple类型的list赋值给lists
+//        List<? extends Apple> lists = new ArrayList<>();
+//        lists.add(new BadApple()); error
         List<? extends Apple> lists = Arrays.asList(new Apple(), new BadApple());
         Apple a = (Apple) lists.get(0);
         Apple b = (Apple) lists.get(1);
@@ -26,6 +33,11 @@ public class WildcardTest {
         //list1.add(new Fruit()); error
 
         Collections.copy(list1, lists);
+
+        ArrayList<?> unknownList = new ArrayList<>();
+        unknownList.add(null);
+//         since the type is unknown, we can only add null or elements with an unspecified type (which effectively means only null can be added).
+//        unknownList.add(a);
     }
 }
 class Fruit{

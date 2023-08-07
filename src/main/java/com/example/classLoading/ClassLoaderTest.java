@@ -15,7 +15,6 @@ public class ClassLoaderTest {
                     Stack<Integer> st = new Stack<>();
                     Set<Integer> set = new HashSet<>();
                     String fileName = name.substring(name.lastIndexOf(".") + 1) + ".class";
-                    fileName.indexOf('c');
                     InputStream is = getClass().getResourceAsStream(fileName);
                     if (is == null) {
                         return super.loadClass(name);
